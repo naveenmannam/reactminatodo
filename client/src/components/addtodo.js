@@ -1,43 +1,45 @@
-import React, { Component } from 'react'
-
+import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 class AddTodo extends Component {
-  state={
-     item: ''
-  }
+  state = {
+    item: ''
+  };
 
-  onItemChange = (e) => {
+  onItemChange = e => {
     const val = e.target.value;
-    if(!val){
+    if (!val) {
       this.setState({
         item: ''
-      })
-    }else{
+      });
+    } else {
       this.setState({
         item: val
-      })
+      });
     }
-  }
+  };
 
-  addTodoItem = (e) => {
+  addTodoItem = e => {
     e.preventDefault();
-    this.props.todoAdd(this.state.item)
+    this.props.todoAdd(this.state.item);
     this.setState({
       item: ''
-    })
-  }
+    });
+  };
+
   render() {
     return (
       <div className="form">
         <form onSubmit={this.addTodoItem}>
-            <input type="text"
+          <input
+            type="text"
             value={this.state.item}
             onChange={this.onItemChange}
-            />
+          />
           <button className="button">Add Todo</button>
         </form>
       </div>
-    )
+    );
   }
 }
 
-export default AddTodo
+export default AddTodo;
