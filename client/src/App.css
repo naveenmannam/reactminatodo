@@ -1,0 +1,88 @@
+.App {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.textleft {
+  list-style: none;
+  text-align: left;
+  background-color: gainsboro;
+  border: 1px solid gray;
+  border-radius: 3px;
+  margin: 5px;
+  padding: 10px;
+}
+
+
+.textright {
+  float: right;
+  cursor: pointer;
+}
+
+.form {
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+input {
+  padding: 0.6em 0.6em;
+  border-radius: 3px;
+  border: 1px solid gray;
+  font-size: 1.2rem;
+  line-height: 0.8;
+  margin-right: 10px;
+}
+
+.button {
+  background-color: #fff;
+  border-radius: 161683px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  color: #9013fe;
+  display: inline-block;
+  font-size: 0.875rem;
+  line-height: 1;
+  padding: 1em 1em;
+  text-shadow: none;
+  transition-property: box-shadow, transform;
+  user-select: none;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  transition: 0.5s ease-in-out;
+}
+
+.button:hover {
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
+  transform: scale(1.02) translateX(4px);
+  transition: 0.5s ease-in-out;
+}
+
+.button:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  transform: scale(0.98) translateY(-2px);
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+.items p{
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.items p .mainitem {
+  margin-right: auto
+}
+
+.check {
+  text-decoration: line-through;
+  color: #999;
+}
