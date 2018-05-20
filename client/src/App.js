@@ -5,6 +5,7 @@ import './App.css';
 import * as TodoAPI from './components/utils/TodoAPI';
 import AddTodo from './components/addtodo';
 import ListTodo from './components/listtodo';
+import About from './components/header/about';
 class App extends Component {
   state = {
     todos: []
@@ -54,8 +55,13 @@ class App extends Component {
       <div className="App">
         <Switch>
           <Route
+            path="/add"
+            render={() => <AddTodo todoAdd={this.todoAdd} />}
+          />
+          <Route path="/about" component={About}/>
+          <Route
             path="/"
-            exact="true"
+            exact
             render={() => (
               <ListTodo
                 todos={this.state.todos}
@@ -63,10 +69,6 @@ class App extends Component {
                 todoUpdate={this.todoUpdate}
               />
             )}
-          />
-          <Route
-            path="/add"
-            render={() => <AddTodo todoAdd={this.todoAdd} />}
           />
         </Switch>
       </div>
